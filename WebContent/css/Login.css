@@ -1,0 +1,80 @@
+
+.container{
+	position:absolute;
+	height:400px;
+	top:100px;
+	border-radius:25px;
+	border:thin solid black;
+	padding:0;
+}
+
+#firstContainer{
+	border-radius:25px;
+	border-top-right-radius:0;
+	border-bottom-right-radius:0;
+	height:100%;
+	border-right:thin solid black;
+	background-color:#4682B4;
+	margin-left:0;
+
+}
+
+#secondContainer{
+	height:100%;
+}
+
+#backgroundImage{
+	border-top-right-radius:25px;
+	border-bottom-right-radius:25px;
+	width:447px;
+	height:400px;
+	opacity:0.8;
+}
+
+#loginHeading{
+	position: absolute;
+	top:70px;
+	margin-left:140px;
+	font-family:"Times New Roman";
+	font-size:20px;
+	color:white;
+	font-weight:bold;
+}
+#loginForm{
+	position: absolute;
+	margin-left:60px;
+	margin-right:60px;
+	top:120px;
+	width:300px;
+	border-radius:10px;
+	background-color:white;
+}
+
+#usernameDiv,#passwordDiv{
+	width:100%;
+	margin-left:5px;
+}
+#usernameInput,#passwordInput{
+	border:none;
+	height:50px;
+	padding:10px;
+	width:250px;
+	transition: all 0.8s;
+	background-color:transparent;
+	border-bottom:thin solid grey;
+}
+
+#usernameInput:focus,#passwordInput:focus{
+	outline-width:0;
+	border-bottom:thin solid red;
+}
+
+#loginButtonDiv{
+	padding:10px;
+	height:50px;
+}
+
+#loginButton{
+	width:80px;
+	border-radius:20px;
+}
