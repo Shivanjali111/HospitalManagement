@@ -13,7 +13,7 @@ public class DoctorsMapper implements RowMapper<Doctors> {
 		Doctors doctor = new Doctors();
 		
 		doctor.setBranch_id(rs.getString("branch_id"));
-		doctor.setContact(rs.getInt("contact"));
+		doctor.setContact(rs.getLong("contact"));
 		doctor.setCreated_by(rs.getString("created_by"));
 		doctor.setDate_of_creation(rs.getDate("date_of_creation"));
 		doctor.setDate_of_modification(rs.getDate("date_of_modification"));

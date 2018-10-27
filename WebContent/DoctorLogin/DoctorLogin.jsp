@@ -58,62 +58,9 @@
       navLinks: true, // can click day/week names to navigate views
       editable: true,
       eventLimit: true, // allow "more" link when too many events
-      events: [
-        {
-          title: 'All Day Event',
-          start: '2018-03-01'
-        },
-        {
-          title: 'Long Event',
-          start: '2018-03-07',
-          end: '2018-03-10'
-        },
-        {
-          id: 999,
-          title: 'Repeating Event',
-          start: '2018-03-09 16:00:00'
-        },
-        {
-          id: 999,
-          title: 'Repeating Event',
-          start: '2018-03-16 16:00:00'
-        },
-        {
-          title: 'Conference',
-          start: '2018-03-11',
-          end: '2018-03-13'
-        },
-        {
-          title: 'Meeting',
-          start: '2018-03-12 10:30:00',
-          end: '2018-03-12 12:30:00'
-        },
-        {
-          title: 'Lunch',
-          start: '2018-03-12 12:00:00'
-        },
-        {
-          title: 'Meeting',
-          start: '2018-03-12 14:30:00'
-        },
-        {
-          title: 'Happy Hour',
-          start: '2018-03-12 17:30:00'
-        },
-        {
-          title: 'Dinner',
-          start: '2018-03-12 20:00:00'
-        },
-        {
-          title: 'Birthday Party',
-          start: '2018-03-13 07:00:00'
-        },
-        {
-          title: 'Click for Google',
-          url: 'http://google.com/',
-          start: '2018-03-28'
-        }
-      ]
+      events:{
+    	  url: 'events.json',
+      }
     });
 
   });

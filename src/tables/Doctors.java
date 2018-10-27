@@ -13,7 +13,7 @@ public class Doctors {
 	private String gender;
 	private Date dob;
 	private String mail;
-	private int contact;
+	private long contact;
 	private Date date_of_creation;
 	private String created_by;
 	private Date date_of_modification;
@@ -80,10 +80,10 @@ public class Doctors {
 	public void setMail(String mail) {
 		this.mail = mail;
 	}
-	public int getContact() {
+	public long getContact() {
 		return contact;
 	}
-	public void setContact(int contact) {
+	public void setContact(long contact) {
 		this.contact = contact;
 	}
 	public Date getDate_of_creation() {

@@ -1,115 +1,37 @@
 package mapper;
-import java.sql.Date;
+import tables.Associates;
+import org.springframework.jdbc.core.RowMapper;
 
-public class AssociatesMapper {
-	
-	private String associate_id;
-	private String associate_name;
-	private String hospital_id;
-	private String branch_id;
-	private String city;
-	private String state;
-	private String country;
-	private int pin_code;
-	private String mail;
-	private int contact;
-	private Date date_of_creation;
-	private String created_by;
-	private Date date_of_modification;
-	private String modified_by;
-	private int is_active;
-	
-	public String getAssociate_id() {
-		return associate_id;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class AssociatesMapper implements RowMapper<Associates> {
+
+	@Override
+	public Associates mapRow(ResultSet rs, int arg1) throws SQLException {
+		Associates associate = new Associates();
+		
+		associate.setAssociate_id(rs.getString("associate_id"));
+		associate.setAssociate_name(rs.getString("associate_name"));
+		associate.setBranch_id(rs.getString("branch_id"));
+		associate.setCity(rs.getString("branch_id"));
+		associate.setContact(rs.getInt("contact"));
+		associate.setCountry(rs.getString("country"));
+		associate.setCreated_by(rs.getString("created_by"));
+		associate.setDate_of_creation(rs.getDate("date_of_creation"));
+		associate.setDate_of_modification(rs.getDate("date_of_modification"));
+		associate.setHospital_id(rs.getString("hospital_id"));
+		associate.setIs_active(rs.getInt("is_active"));
+		associate.setMail(rs.getString("mail"));
+		associate.setModified_by(rs.getString("modified_by"));
+		associate.setPin_code(rs.getInt("pin_code"));
+		associate.setState(rs.getString("state"));
+		
+	    return associate;
+	      
+	      
 	}
-	public void setAssociate_id(String associate_id) {
-		this.associate_id = associate_id;
-	}
-	public String getAssociate_name() {
-		return associate_name;
-	}
-	public void setAssociate_name(String associate_name) {
-		this.associate_name = associate_name;
-	}
-	public String getHospital_id() {
-		return hospital_id;
-	}
-	public void setHospital_id(String hospital_id) {
-		this.hospital_id = hospital_id;
-	}
-	public String getBranch_id() {
-		return branch_id;
-	}
-	public void setBranch_id(String branch_id) {
-		this.branch_id = branch_id;
-	}
-	public String getCity() {
-		return city;
-	}
-	public void setCity(String city) {
-		this.city = city;
-	}
-	public String getState() {
-		return state;
-	}
-	public void setState(String state) {
-		this.state = state;
-	}
-	public String getCountry() {
-		return country;
-	}
-	public void setCountry(String country) {
-		this.country = country;
-	}
-	public int getPin_code() {
-		return pin_code;
-	}
-	public void setPin_code(int pin_code) {
-		this.pin_code = pin_code;
-	}
-	public String getMail() {
-		return mail;
-	}
-	public void setMail(String mail) {
-		this.mail = mail;
-	}
-	public int getContact() {
-		return contact;
-	}
-	public void setContact(int contact) {
-		this.contact = contact;
-	}
-	public Date getDate_of_creation() {
-		return date_of_creation;
-	}
-	public void setDate_of_creation(Date date_of_creation) {
-		this.date_of_creation = date_of_creation;
-	}
-	public String getCreated_by() {
-		return created_by;
-	}
-	public void setCreated_by(String created_by) {
-		this.created_by = created_by;
-	}
-	public Date getDate_of_modification() {
-		return date_of_modification;
-	}
-	public void setDate_of_modification(Date date_of_modification) {
-		this.date_of_modification = date_of_modification;
-	}
-	public String getModified_by() {
-		return modified_by;
-	}
-	public void setModified_by(String modified_by) {
-		this.modified_by = modified_by;
-	}
-	public int getIs_active() {
-		return is_active;
-	}
-	public void setIs_active(int is_active) {
-		this.is_active = is_active;
-	}
-	
-	
+
 	
 }

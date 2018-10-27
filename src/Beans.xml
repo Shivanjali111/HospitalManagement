@@ -12,5 +12,9 @@
 	   <property name = "username" value = "root"/>
 	   <property name = "password" value = "root123"/>
    </bean>
-
+	
+	<bean id = "doctorsTemplate" 
+      class = "template.DoctorsTemplate">
+      <property name = "dataSource" ref = "dataSource" />    
+   </bean>
 </beans>

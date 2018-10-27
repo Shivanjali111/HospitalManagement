@@ -27,7 +27,8 @@
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 	<%
 	HttpSession session1=request.getSession(false);
-		ArrayList<String> name=(ArrayList) session1.getAttribute("name");
+		ArrayList<String> name=(ArrayList)session1.getAttribute("name");
+		/* ArrayList<String> name=(ArrayList) session1.getAttribute("name"); */
 	%>
   <!--banner-->
   <section id="banner" class="banner">
